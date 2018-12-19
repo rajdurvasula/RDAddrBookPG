@@ -40,3 +40,5 @@ $ export PG_PASSWORD=postgres
 $ ./start_app.sh
 ```
 
+## Deployment with AWS ECS
+To deploy this application as a Container service on AWS ECS, use the taskdef.json file.
