@@ -44,4 +44,3 @@ $ ./start_app.sh
 To deploy this application as a Container service on AWS ECS, use the taskdef.json file.
 
     - Pre-requisites:
-        - Ensure ECR is created and a Linux Docker image is pushed to ECR. 
