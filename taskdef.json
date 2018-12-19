@@ -1,0 +1,18 @@
+{
+    "family": "RDAddrBook",
+    "containerDefinitions": [
+        {
+            "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+            "name": "rdaddrbook-pg",
+            "cpu": 50,
+            "memory": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 9080,
+                    "hostPort": 80
+                }
+            ]
+        }
+    ]
+}
