@@ -16,7 +16,7 @@ RUN mkdir -p /root/app
 COPY resources/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm
 COPY resources/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm
 COPY resources/postgresql10-libs-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-libs-10.6-1PGDG.rhel7.x86_64.rpm
-COPY resources/RDAddrBook-0.0.1-SNAPSHOT.jar /root/app/RDAddrBook-0.0.1-SNAPSHOT.jar
+COPY src /root/app/
 COPY resources/start_app.sh /root/app/start_app.sh
 COPY resources/setup_db_host_ip.sh /root/setup_db_host_ip.sh
 
@@ -26,7 +26,10 @@ RUN yum -y install libicu systemd-sysv libxslt dos2unix && \
   rpm -Uvh /root/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm && \
   rpm -Uvh /root/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm
 
-RUN dos2unix /root/setup_db_host_ip.sh && \
+RUN cd /root/app && \
+  mvn clean && \
+  mvn package -DskipTests && \
+  dos2unix /root/setup_db_host_ip.sh && \
   dos2unix /root/app/start_app.sh && \
   chmod u+x /root/app/start_app.sh && \
   chmod u+x /root/setup_db_host_ip.sh && \
