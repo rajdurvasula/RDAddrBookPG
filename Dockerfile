@@ -11,12 +11,14 @@ ENV APP_DB rdaddrbookdb
 
 ARG DEPENDENCY=target
 
-RUN mkdir -p /root/app
+RUN mkdir -p /root/app/src
 
 COPY resources/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm
 COPY resources/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm
 COPY resources/postgresql10-libs-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-libs-10.6-1PGDG.rhel7.x86_64.rpm
-COPY src /root/app/
+COPY mvnw* /root/app/
+COPY pom.xml /root/app/
+COPY src /root/app/src/
 COPY resources/start_app.sh /root/app/start_app.sh
 COPY resources/setup_db_host_ip.sh /root/setup_db_host_ip.sh
 
