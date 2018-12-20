@@ -7,12 +7,6 @@
             "cpu": 50,
             "memory": 512,
             "essential": true,
-            "portMappings": [
-                {
-                    "containerPort": 9080,
-                    "hostPort": 80
-                }
-            ],
             "environment": [
                 {
                     "name": "APP_PORT",
@@ -41,6 +35,12 @@
                 {
                     "name": "PG_PASSWORD",
                     "value": "postgres"
+                }
+            ],
+            "portMappings": [
+                {
+                    "containerPort": 9080,
+                    "hostPort": 80
                 }
             ]
         }
