@@ -27,8 +27,9 @@ RUN yum -y install libicu systemd-sysv libxslt dos2unix && \
   rpm -Uvh /root/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm
 
 RUN cd /root/app && \
-  mvn clean && \
-  mvn package -DskipTests && \
+  ls && \
+  /usr/local/src/apache-maven-3.5.4/bin/mvn clean && \
+  /usr/local/src/apache-maven-3.5.4/bin/mvn package -DskipTests && \
   dos2unix /root/setup_db_host_ip.sh && \
   dos2unix /root/app/start_app.sh && \
   chmod u+x /root/app/start_app.sh && \
