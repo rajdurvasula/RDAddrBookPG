@@ -1,4 +1,4 @@
-FROM maven:3.5.4-jdk8
+FROM 466323227181.dkr.ecr.eu-west-1.amazonaws.com/maven:3.5.4-jdk8
 LABEL maintainer="raj.durvasula@gmail.com"
 
 ENV APP_PORT 9080
