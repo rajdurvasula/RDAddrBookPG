@@ -12,6 +12,36 @@
                     "containerPort": 9080,
                     "hostPort": 80
                 }
+            ],
+            "environment": [
+                {
+                    "name": "APP_PORT",
+                    "value": "9080"
+                },
+                {
+                    "name": "PG_HOST_IP",
+                    "value": "10.0.0.148"
+                },
+                {
+                    "name": "PG_HOST",
+                    "value": "ip-10-0-0-148.eu-west-1.compute.internal"
+                },
+                {
+                    "name": "PG_PORT",
+                    "value": "5432"
+                },
+                {
+                    "name": "APP_DB",
+                    "value": "rdaddrbookdb"
+                },
+                {
+                    "name": "PG_USER",
+                    "value": "postgres"
+                },
+                {
+                    "name": "PG_PASSWORD",
+                    "value": "postgres"
+                }
             ]
         }
     ]
