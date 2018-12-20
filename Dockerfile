@@ -16,8 +16,6 @@ RUN mkdir -p /root/app
 COPY resources/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm
 COPY resources/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm
 COPY resources/postgresql10-libs-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-libs-10.6-1PGDG.rhel7.x86_64.rpm
-COPY resources/postgresql-42.2.5.jar /root/postgresql-42.2.5.jar
-COPY resources/TestPgsql.java /root/TestPgsql.java
 COPY resources/RDAddrBook-0.0.1-SNAPSHOT.jar /root/app/RDAddrBook-0.0.1-SNAPSHOT.jar
 COPY resources/start_app.sh /root/app/start_app.sh
 COPY resources/setup_db_host_ip.sh /root/setup_db_host_ip.sh
