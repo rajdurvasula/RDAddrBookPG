@@ -45,4 +45,3 @@ To deploy this application as a Container service on AWS ECS, use the taskdef.js
 
     - Pre-requisites:
       - Create ECR repositories and upload docker images as needed
-      - Create GitHub repository and upload application code
