@@ -10,36 +10,36 @@
             "environment": [
                 {
                     "name": "APP_PORT",
-                    "value": "9080"
+                    "value": "APP_PORT_PARAM"
                 },
                 {
                     "name": "PG_HOST_IP",
-                    "value": "10.0.0.148"
+                    "value": "PG_HOST_IP_PARAM"
                 },
                 {
                     "name": "PG_HOST",
-                    "value": "ip-10-0-0-148.eu-west-1.compute.internal"
+                    "value": "PG_HOST_PARAM"
                 },
                 {
                     "name": "PG_PORT",
-                    "value": "5432"
+                    "value": "PG_PORT_PARAM"
                 },
                 {
                     "name": "APP_DB",
-                    "value": "rdaddrbookdb"
+                    "value": "APP_DB_PARAM"
                 },
                 {
                     "name": "PG_USER",
-                    "value": "postgres"
+                    "value": "PG_USER_PARAM"
                 },
                 {
                     "name": "PG_PASSWORD",
-                    "value": "postgres"
+                    "value": "PG_PASSWORD_PARAM"
                 }
             ],
             "portMappings": [
                 {
-                    "containerPort": 9080,
+                    "containerPort": APP_PORT_PARAM,
                     "hostPort": 80
                 }
             ]
