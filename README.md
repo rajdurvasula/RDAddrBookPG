@@ -46,4 +46,5 @@ To deploy this application as a Container service on AWS ECS, use the taskdef.js
     - Pre-requisites:
       - Create ECR repositories and upload docker images as needed
       - Create EC2 instance and install PostgreSQL Database in it
+        - Allow remote connections from ECS instances
 
