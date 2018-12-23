@@ -39,7 +39,7 @@
             ],
             "portMappings": [
                 {
-                    "containerPort": APP_PORT_PARAM,
+                    "containerPort": 9080,
                     "hostPort": 80
                 }
             ]
