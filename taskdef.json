@@ -6,7 +6,21 @@
             "name": "rdaddrbook-pg",
             "cpu": 50,
             "memory": 512,
+            "command": [
+                "/root/app/start_app.sh"
+            ]
+            "entryPoint": [
+                "sh", "-c"
+            ]
             "essential": true,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/ec2-task-definition",
+                    "awslogs-region": "eu-west-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
             "environment": [
                 {
                     "name": "APP_PORT",
