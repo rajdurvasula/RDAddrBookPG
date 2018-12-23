@@ -48,5 +48,4 @@ To deploy this application as a Container service on AWS ECS, use the taskdef.js
       - Create EC2 instance and install PostgreSQL Database in it
         - Update postgresql.conf, pg_hba.conf files to allow remote connectivity
         - Set admin user password
-        - Create 'rdaddrbookdb' database
 
