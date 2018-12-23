@@ -8,10 +8,10 @@
             "memory": 512,
             "command": [
                 "/root/app/start_app.sh"
-            ]
+            ],
             "entryPoint": [
                 "sh", "-c"
-            ]
+            ],
             "essential": true,
             "logConfiguration": {
                 "logDriver": "awslogs",
