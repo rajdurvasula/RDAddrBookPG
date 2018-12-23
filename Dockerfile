@@ -28,7 +28,8 @@ RUN yum -y install libicu systemd-sysv libxslt dos2unix && \
   mkdir -p /root/.postgresql && \
   rpm -Uvh /root/postgresql10-libs-10.6-1PGDG.rhel7.x86_64.rpm && \
   rpm -Uvh /root/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm && \
-  rpm -Uvh /root/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm
+  rpm -Uvh /root/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm && \
+  yum -y install awslogs
 
 RUN cd /root/app && \
   ls && \
