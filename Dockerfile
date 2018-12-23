@@ -12,14 +12,7 @@ ENV APP_DB rdaddrbookdb
 ARG DEPENDENCY=target
 
 RUN mkdir -p /root/app/src && \
-  mkdir -p /root/app/scripts && \
-  cd /root && \
-  curl -O https://bootstrap.pypa.io/get-pip.py && \
-  python /root/get-pip.py && \
-  pip install boto3 && \
-  mkdir -p /root/.aws && \
-  echo "[default]" > /root/.aws/config && \
-  echo "region = eu-west-1" > /root/.aws/config
+  mkdir -p /root/app/scripts
 
 COPY resources/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-10.6-1PGDG.rhel7.x86_64.rpm
 COPY resources/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm /root/postgresql10-contrib-10.6-1PGDG.rhel7.x86_64.rpm
