@@ -49,6 +49,8 @@ public class MainController {
 		List<String> errorMessageList = new ArrayList<String>();
 		String firstName = contactForm.getFirstName();
 		String lastName = contactForm.getLastName();
+		String groupName = contactForm.getGroupName();
+		String organization = contactForm.getOrganization();
 		Contact contact = new Contact();
 		if (firstName.trim().equals(""))
 			errorMessageList.add("First Name cannot be empty !");
@@ -56,6 +58,8 @@ public class MainController {
 		if (lastName.trim().equals(""))
 			errorMessageList.add("Last Name cannot be empty !");
 		contact.setLastName(contactForm.getLastName());
+		contact.setGroupName(groupName);
+		contact.setOrganization(organization);
 		contactRepo.save(contact);
 		String[] errorMessages = new String[errorMessageList.size()];
 		errorMessages = (String[]) errorMessageList.toArray(new String[0]);

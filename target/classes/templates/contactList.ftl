@@ -14,11 +14,15 @@
 <tr>
 <th>First Name</th>
 <th>Last Name</th>
+<th>Group</th>
+<th>Organization</th>
 </tr>
 <#list contacts as contact>
 <tr>
 <td>${contact.firstName}</td>
 <td>${contact.lastName}</td>
+<td>${contact.groupName}</td>
+<td>${contact.organization}</td>
 </tr>
 </#list>
 </table>

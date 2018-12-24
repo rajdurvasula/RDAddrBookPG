@@ -21,6 +21,9 @@ ${errorMessage}
 <form name="contact" action="" method="POST">
 First Name: <@spring.formInput "contactForm.firstName" "" "text"/><br/>
 Last Name: <@spring.formInput "contactForm.lastName" "" "text"/><br/>
+Group Name: <@spring.formInput "contactForm.groupName" "" "text"/><br/>
+Organization: <@spring.formInput "contactForm.organization" "" "text"/><br/>
+Notes: <@spring.formInput "contactForm.notes" "" "text"/><br/>
 <input type="submit" value="Create"/>
 </form>
 </fieldset>
