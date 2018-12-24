@@ -7,9 +7,11 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Resource;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,6 +42,29 @@ public class ContactRestController {
 		if (optionalObj.isPresent()) {
 			Resource<Contact> resource = new Resource<Contact>(optionalObj.get());
 			return resource;
+		} else {
+			throw new ResourceNotFoundException("Contact", "Id", contactId);
+		}
+	}
+	
+	@PutMapping("/contacts")
+	public Resource<Contact> updateContact(@Valid @RequestBody Contact contact) {
+		Optional<Contact> optionalObj = contactRepo.findById(contact.getId());
+		if (optionalObj.isPresent()) {
+			Contact updatedContact = contactRepo.save(contact);
+			Resource<Contact> resource = new Resource<Contact>(updatedContact);
+			return resource;
+		} else {
+			throw new ResourceNotFoundException("Contact", "Id", contact.getId());
+		}
+	}
+	
+	@DeleteMapping("/contacts/{contactId}")
+	public void deleteContact(@PathVariable(value="contactId") Long contactId) {
+		Optional<Contact> optionalObj = contactRepo.findById(contactId);
+		if (optionalObj.isPresent()) {
+			Contact contact = optionalObj.get();
+			contactRepo.delete(contact);
 		} else {
 			throw new ResourceNotFoundException("Contact", "Id", contactId);
 		}
