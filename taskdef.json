@@ -1,5 +1,5 @@
 {
-    "family": "RDAddrBook",
+    "family": "RDAddrBook1",
     "containerDefinitions": [
         {
             "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
@@ -10,7 +10,7 @@
                 "/root/app/start_app.sh"
             ],
             "entryPoint": [
-                "sh", "-c"
+                "/root/app/start_app.sh"
             ],
             "essential": true,
             "logConfiguration": {
