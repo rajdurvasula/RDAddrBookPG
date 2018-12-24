@@ -6,7 +6,7 @@ RDAddrBookPG is a simple Address Book application with PostgreSQL Database.
   - JPA
   - REST
   - Spring Boot Actuator
-  - AngularJS with Freemarker templates
+  - AngularJS with Freemarker templates sample page for "Contact" resource
 
 # Updates!
 
