@@ -10,7 +10,8 @@ RDAddrBookPG is a simple Address Book application with PostgreSQL Database.
 
 # Updates!
 
-  - None
+  - Added PUT, DELETE rest calls
+  - Basic AngularJS UI for "Contact" resource
 
 ### Setup
 
